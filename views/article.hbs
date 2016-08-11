@@ -9,24 +9,30 @@
     <script src="../components/semantic/dist/semantic.min.js"></script>
 </head>
 
-    <img src={{article.image}}>
-    <br>
-    <br>
-    <div class="ui text container">
-        <h1 class="ui header">{{article.title}}</h1>
-        <div class="ui horizontal list" id="sub-header">
-            <div class="item">
-                <div class="content">
-                    Written by:
-                    <div class="ui sub header">{{article.author}}</div>
-                </div>
-            </div>
-            <div class="item" id="wikiBtn">
-                <a class="ui icon button" href="{{article.wikiLink}}">
-                    <i class="wikipedia icon"></i>
-                </a>
+<div class="ui large breadcrumb">
+    <a class="section" href="/">Home</a>
+    <i class="right angle icon divider"></i>
+    <a class="section" href="../topics/{{article.topic._id}}">{{article.topic.name}}</a>
+
+</div>
+<img src={{article.image}}>
+<br>
+<br>
+<div class="ui text container">
+    <h1 class="ui header">{{article.title}}</h1>
+    <div class="ui horizontal list" id="sub-header">
+        <div class="item">
+            <div class="content">
+                Written by:
+                <div class="ui sub header">{{article.author}}</div>
             </div>
         </div>
-        <br>
-        <p>{{article.body}}</p>
+        <div class="item" id="wikiBtn">
+            <a class="ui icon button" href="{{article.wikiLink}}">
+                <i class="wikipedia icon"></i>
+            </a>
+        </div>
     </div>
+    <br>
+    <p>{{article.body}}</p>
+</div>

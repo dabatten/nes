@@ -26,10 +26,18 @@
 
     <div class="ui container">
         <p>
-            Welcome to
-            {{ title }}
+            Welcome to {{ title }}
         </p>
-        <button class="ui primary button">Hello World!</button>
+        <a class="ui primary button">Hello</a>
+
+        <ul>
+            {{#each topics as |topic|}}
+            <li>
+                <a href="topics/{{topic._id}}">{{topic.name}}</a>
+                <span class="ui label">{{topic.articles.length}}</span>
+            </li>
+            {{/each}}
+        </ul>
     </div>
 
 </body>

@@ -1,6 +1,10 @@
 var mongoose = require('mongoose');
 
 var ArticleSchema = new mongoose.Schema({
+    topic: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Topic'
+    },
     title: String,
     author: String,
     body: String,
@@ -9,7 +13,7 @@ var ArticleSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    image: String
+    image: String,
 
 });
 

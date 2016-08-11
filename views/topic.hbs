@@ -1,0 +1,20 @@
+<head>
+    <title>
+        {{ topic.name }}
+    </title>
+    <link rel="stylesheet" href="../components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/article.css">
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/semantic/dist/semantic.min.js"></script>
+</head>
+
+<a href="/">Home</a>
+<h2>{{topic.name}}</h2>
+<ul>
+    {{#each topic.articles as |article|}}
+        <li>
+            <a href="../articles/{{article._id}}">{{article.title}}</a>
+        </li>
+    {{/each}}
+</ul>

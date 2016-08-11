@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 //Models
 var mongoose = require('mongoose');
 require('./models/Articles');
+require('./models/Topics');
 mongoose.connect('mongodb://localhost/nes');
 
 
