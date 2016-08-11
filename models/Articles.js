@@ -8,8 +8,8 @@ var ArticleSchema = new mongoose.Schema({
     date: {
         type: Date,
         default: Date.now
-    }
-    //TODO add image
+    },
+    image: String
 
 });
 
