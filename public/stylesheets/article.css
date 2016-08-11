@@ -1,0 +1,16 @@
+.ui.horizontal.list {
+    width: 100%;
+    background: whitesmoke;
+}
+
+.ui.horizontal.list>.item {
+    margin: 0.25em;
+}
+
+.ui.horizontal.list>.item>.content {
+    margin-left: 0.5em;
+}
+
+#wikiBtn {
+    float: right;
+}

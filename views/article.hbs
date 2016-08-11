@@ -1,0 +1,29 @@
+<head>
+    <title>
+        {{ article.title }}
+    </title>
+    <link rel="stylesheet" href="../components/semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/article.css">
+    <script src="../components/jquery/dist/jquery.min.js"></script>
+    <script src="../components/semantic/dist/semantic.min.js"></script>
+</head>
+
+    <div class="ui text container">
+        <h2 class="ui header">{{article.title}}</h2>
+        <div class="ui horizontal list" id="sub-header">
+            <div class="item">
+                <div class="content">
+                    Written by:
+                    <div class="ui sub header">{{article.author}}</div>
+                </div>
+            </div>
+            <div class="item" id="wikiBtn">
+                <a class="ui icon button" href="{{article.wikiLink}}">
+                    <i class="wikipedia icon"></i>
+                </a>
+            </div>
+        </div>
+        <br>
+        <p>{{article.body}}</p>
+    </div>
